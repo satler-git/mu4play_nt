@@ -3,4 +3,4 @@
 - Flontend : django
 - backend : sqlite
 - player : pychromecast
-![icon](./icon.png "icon")
+![icon](./image/icon.png "icon")
