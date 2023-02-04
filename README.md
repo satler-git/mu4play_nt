@@ -5,3 +5,4 @@
 - subprocess
 - sys
 - cx_Freeze 
+- sqlite
