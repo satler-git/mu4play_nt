@@ -3,8 +3,10 @@ import subprocess
 import datetime
 import sys
 import os
+import sqlite3
 import pychromecast
 from pychromecast.controllers.youtube import YouTubeController
+
 
 class DjangoServer :
     """this class is server class and chromecast class"""
@@ -37,4 +39,14 @@ class DjangoServer :
             youtube_cont.play_video(self.wlist[self.count+1])
             browser.stop_discovery()
         return self.count
+class Sdb:
+    """sqlite database control"""
+    def __init__(self, dbname):
+        self.dbname = dbname
+        self.dbins = None
+    def connect(self):
+        """for database connecting"""
+        self.dbins = sqlite3.connect(self.dbname)
+    def ___del__(self):
+        self.dbins.close()
 #maine
