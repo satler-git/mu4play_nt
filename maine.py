@@ -3,7 +3,7 @@ import subprocess
 import datetime
 import sys
 import os
-import pychromecrast
+import pychromecast
 from pychromecast.controllers.youtube import YouTubeController
 
 class DjangoServer :
@@ -15,7 +15,8 @@ class DjangoServer :
     def runserver(self) :
         """running django server."""
         subprocess.run("cd" + os.getcwd() + "\\mu4play", shell=True , check=False)
-        subprocess.run("python manage.py runserver 0.0.0.0:8000", shell=True, check=False)
+        #npm系のサーバーランコマンド
+        subprocess.run("", shell=True, check=False)
     def v2c(self) :
         """video casting to ccn chromecast."""
         def gettime() :
